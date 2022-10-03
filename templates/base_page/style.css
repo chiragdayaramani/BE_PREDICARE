@@ -25,7 +25,7 @@ body {
 .main-header{
   margin-top: -25px;
   height:66px;
-  background: #6363d1 !important;
+  background: #00B1B6 !important;
 }
 .main-header.fixed-nav #mainMenu li > a {
   color: #fff;
