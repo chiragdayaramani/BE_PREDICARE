@@ -54,7 +54,7 @@ class doctor(models.Model):
 
     specialization = models.CharField(max_length = 30)
 
-    rating = models.IntegerField(default=0)
+    # rating = models.IntegerField(default=0)
 
 
 

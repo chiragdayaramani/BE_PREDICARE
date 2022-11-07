@@ -5,7 +5,7 @@ urlpatterns = [
     path("", views.home, name="home"),
 
     path('admin_ui', views.admin_ui , name='admin_ui'),
-
+    path('about', views.about , name='about'),
     path('patient_ui', views.patient_ui , name='patient_ui'),
     path('checkdisease', views.checkdisease, name="checkdisease"),
     path('pviewprofile/<str:patientusername>', views.pviewprofile , name='pviewprofile'),
