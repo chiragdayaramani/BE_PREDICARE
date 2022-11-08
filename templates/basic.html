@@ -58,10 +58,6 @@
       .copyright p{border-top:1px solid rgba(255,255,255,.1);} 
     }
     
-
-
-
-
     {% block style %}
 
 
@@ -71,17 +67,8 @@
 
 
 </style>
-
-
-
-
     {% block head %}
-
-
-
     {% endblock %}
-
-
     <header class="main-header">
       <div class="container">
         <nav class="navbar sticky-top navbar-expand-lg main-nav px-0">
@@ -96,10 +83,10 @@
           <div class="collapse navbar-collapse" id="mainMenu">
             <ul class="navbar-nav mx-auto text-center text-uppercase f1">
               <li>
-                <a href="#home" class="active active-first">home</a>
+                <a href="{% url 'home' %}" class="active active-first">home</a>
               </li>
               <li>
-                <a href="#about">about us</a>
+                <a href="{% url 'about' %}">about us</a>
               </li>
               <li>
                 <a href="#service">services</a>
@@ -109,7 +96,7 @@
                 <a href="#team">team</a>
               </li>
               <li>
-                <a href="#contact">contact</a>
+                <a href="{% url 'contact' %}">contact</a>
               </li>
             
             </ul>
@@ -118,10 +105,10 @@
             <ul class="navbar-nav ml-auto text-uppercase f1">
              
               <li>
-                <a href="#contact">Register</a>
+                <a href="{% url 'home' %}">Register</a>
               </li>
               <li>
-                <a href="#contact">Login</a>
+                <a href="{% url 'sign_in_admin' %}">Login</a>
               </li>
             </ul>
           </div>
@@ -193,35 +180,34 @@
 
 
 
-<div class="mt-5 pt-5 pb-5 footer">
+<div class="mt-5 pt-5 pb-5 footer" >
   <div class="container">
     <div class="row">
       <div class="col-lg-5 col-xs-12 about-company">
         <h2>Heading</h2>
-        <p class="pr-5 text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante mollis quam tristique convallis </p>
+        <p class="pr-5 text-white-50">PREDICARE may be a web-based application that makes a difference the understanding to keep a track of wellbeing by giving input as to side effects and anticipating the malady to require most extreme care so as to maintain a strategic distance from any future wellbeing complications. It is an On-the-Go App in this advanced world.</p>
         <p><a href="#"><i class="fa fa-facebook-square mr-1"></i></a><a href="#"><i class="fa fa-linkedin-square"></i></a></p>
       </div>
       <div class="col-lg-3 col-xs-12 links">
         <h4 class="mt-lg-0 mt-sm-3">Links</h4>
           <ul class="m-0 p-0">
-            <li>- <a href="#">Lorem ipsum</a></li>
-            <li>- <a href="#">Nam mauris velit</a></li>
-            <li>- <a href="#">Etiam vitae mauris</a></li>
-            <li>- <a href="#">Fusce scelerisque</a></li>
-            <li>- <a href="#">Sed faucibus</a></li>
-            <li>- <a href="#">Mauris efficitur nulla</a></li>
+            <li> <a href="{% url 'sign_in_admin' %}">Login</a></li>
+            <li> <a href="{% url 'about' %}">About Us</a></li>
+            <li> <a href="#">Team</a></li>
+            <li> <a href="#">Services</a></li>
+            <li> <a href="{% url 'contact' %}">Contact</a></li>
           </ul>
       </div>
       <div class="col-lg-4 col-xs-12 location">
         <h4 class="mt-lg-0 mt-sm-4">Location</h4>
-        <p>22, Lorem ipsum dolor, consectetur adipiscing</p>
-        <p class="mb-0"><i class="fa fa-phone mr-3"></i>(541) 754-3010</p>
-        <p><i class="fa fa-envelope-o mr-3"></i>info@hsdf.com</p>
+        <p>Vivekanand Education Society's Institute of Technology</p>
+        <p class="mb-0"><i class="fa fa-phone mr-3"></i>022 6153 2500</p>
+        <p><i class="fa fa-envelope-o mr-3"></i>https://vesit.ves.ac.in/</p>
       </div>
     </div>
     <div class="row mt-5">
       <div class="col copyright">
-        <p class=""><small class="text-white-50">© 2019. All Rights Reserved.</small></p>
+        <p style="text-align: center;"><small class="text-white-50">© 2022. All Rights Reserved.</small></p>
       </div>
     </div>
   </div>
