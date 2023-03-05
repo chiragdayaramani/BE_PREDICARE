@@ -1,5 +1,5 @@
 from django.shortcuts import render , redirect
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.http import JsonResponse
 from datetime import date
 
@@ -161,8 +161,7 @@ def checkdisease(request):
 
       
         """      #main code start from here...
-        """
-      
+        """  
 
       
         testingsymptoms = []
@@ -183,7 +182,7 @@ def checkdisease(request):
 
         print(inputtest)
       
-
+        
         predicted = model.predict(inputtest)
         print("predicted disease is : ")
         print(predicted)
@@ -193,7 +192,11 @@ def checkdisease(request):
         print(" confidence score of : = {0} ".format(confidencescore))
 
         confidencescore = format(confidencescore, '.0f')
-        predicted_disease = predicted[0]
+        if(len(psymptoms)<=3):
+           predicted_disease="Please Select more than 3 Symptoms"
+           confidencescore=0
+        else:
+           predicted_disease = predicted[0]
 
         
 
